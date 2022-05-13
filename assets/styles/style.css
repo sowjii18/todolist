@@ -5,7 +5,7 @@
   list-style: none;
 }
 body{
-  background: #1c0630;
+  background-image:url("assets/styles/images/img.jpg");
 }
 .todo-content{
   padding: 30px;
@@ -45,7 +45,7 @@ body{
 .right{
   float:left
 }
-.edit-todo,.update-todo,.remove-todo{
+.edit-todo,.update-todo,.remove-todo,.check-todo{
   padding: 0px 5px;
   cursor:pointer;
 }
@@ -76,8 +76,8 @@ body{
   width:100%;
   text-align:justify;
 }
-.todo-content .todo-list .list-row:nth-child(even){
-  background:#009688;
+.todo-content .todo-list .list-row:nth-child(odd){
+  background:yellow;
 }
 .todo-list .edit-todo,.remove-todo,.update-todo{
   visibility:hidden;
@@ -101,6 +101,9 @@ body{
   visibility:visible;
 
 }
+.list-row{
+  margin-bottom: 10px;
+}
 
 @media screen and (max-width: 1000px) {
   body {
@@ -111,21 +114,29 @@ body{
   
   }
   input[type=text]{
-    padding: 50px 1px;
+    padding: 50px ;
     font-size: 60px;
     cursor: pointer;
+    width: 750px;
   }
   .list-data{
-    padding: 50px;
+    padding: 10px;
     font-size: 60px;
 
   }
 .add-todo{
-  padding: 50px 70px;
+  padding: 10px 50px;
+  width: 100px;
 }  
 .error{
   font-size: 70px;
 }
 .todo-list .edit-todo,.remove-todo,.update-todo{
-  padding: 50px 20px 0 0;
+  padding: 10px 20px 0 0;
   font-size:76px;
+}
+.check-todo{
+  width: 200px;
+  padding: 300px;
+
+}

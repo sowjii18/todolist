@@ -4,10 +4,11 @@ $(document).on('click','.add-todo',function(){
 var todoInputData=$(this).siblings('input').val();
 var todoListData=`<div class="row-parent">
   <div class="list-row">
-
+  <input type="checkbox" class="form-check-input" id="Check">
   <div class="list-data">`+ todoInputData+`</div>
   <div class="edit-todo">&#9998;</div>
   <div class="remove-todo">&#x2715;</div>
+
   </div>
   <div class="list-error"></div></div>`;
 
@@ -70,6 +71,10 @@ $(document).on('click','.update-todo',function(){
 });
 
 // line through the  todo list script
-$(document).on('click','.list-data',function(){
- $(this).toggleClass('line-through');
+$(document).on('click','.form-check-input',function(){
+ $(this).parent('.list-row').toggleClass('line-through');
+
 });
+
+
+
